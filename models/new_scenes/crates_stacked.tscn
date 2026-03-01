@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bnjs47n50mpy"]
+
+[ext_resource type="PackedScene" uid="uid://b4ert8yb561gb" path="res://models/props/crates_stacked.glb" id="1_5payf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lj25w"]
+size = Vector3(1.1513672, 1, 1.1137695)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ivu3"]
+size = Vector3(2.0922852, 2.1573486, 1.5582275)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2er7c"]
+height = 0.82769775
+radius = 0.35302734
+
+[node name="CratesStacked" type="StaticBody3D" unique_id=914958241]
+
+[node name="crates_stacked2" parent="." unique_id=1085948034 instance=ExtResource("1_5payf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17127955, 0, -1.1654)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1632053189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5956687, 0.4999194, -0.6210115)
+shape = SubResource("BoxShape3D_lj25w")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2053589204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12520969, 1.0785937, -1.5425081)
+shape = SubResource("BoxShape3D_5ivu3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=614213641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22242847, 0.41708374, -0.64339894)
+shape = SubResource("CylinderShape3D_2er7c")

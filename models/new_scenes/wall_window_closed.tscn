@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dufu2i2ivurab"]
+
+[ext_resource type="PackedScene" uid="uid://npuw0nt3b8x5" path="res://models/building/wall_window_closed.glb" id="1_1kpph"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gtky6"]
+size = Vector3(4.023926, 4.020508, 1)
+
+[node name="WallWindowClosed" type="StaticBody3D" unique_id=257107100]
+
+[node name="wall_window_closed2" parent="." unique_id=1440825071 instance=ExtResource("1_1kpph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010906458, 0, -0.62404966)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=119908264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0026855469, 1.9967732, -0.6289966)
+shape = SubResource("BoxShape3D_gtky6")

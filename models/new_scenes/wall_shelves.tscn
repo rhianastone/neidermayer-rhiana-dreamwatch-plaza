@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cr2fhfp57up17"]
+
+[ext_resource type="PackedScene" uid="uid://n4c30bbylf81" path="res://models/building/wall_shelved.glb" id="1_japkh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yixls"]
+size = Vector3(4.0129395, 4.043457, 1.3955078)
+
+[node name="WallShelves" type="StaticBody3D" unique_id=981739393]
+
+[node name="wall_shelved" parent="." unique_id=1813903464 instance=ExtResource("1_japkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020379066, 1.1920929e-07, -0.5989225)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1855063061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012573242, 2.0025814, -0.41407406)
+shape = SubResource("BoxShape3D_yixls")

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NeidermayerRhiana_Dreamwatch_Plaza"
-run/main_scene="uid://crdnee5yn22d1"
+run/main_scene="uid://cf0oatu2e5k5x"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

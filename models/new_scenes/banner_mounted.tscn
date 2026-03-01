@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://chcg8pbtbc8hf"]
+
+[ext_resource type="PackedScene" uid="uid://xf3qcs3p2hli" path="res://models/props/banner_mounted.glb" id="1_yo7vc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jf02n"]
+size = Vector3(1.5180054, 3.206894, 0.36065674)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ghds"]
+size = Vector3(2.2, 0.4, 0.36065674)
+
+[node name="BannerMounted" type="StaticBody3D" unique_id=525193464]
+
+[node name="banner_mounted" parent="." unique_id=1604917902 instance=ExtResource("1_yo7vc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42956316, 0, -0.38898802)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=648365807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4279846, 2.128684, 0.10177612)
+shape = SubResource("BoxShape3D_jf02n")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1523113643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4689819, 2.8321307, 0.10177612)
+shape = SubResource("BoxShape3D_5ghds")
