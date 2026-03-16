@@ -2,13 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://1wj7paidq5jv" path="res://models/props/table_small.glb" id="1_0x6ld"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_rpwcb"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0x6ld"]
+size = Vector3(1.0058594, 0.9969177, 1)
 
 [node name="TableSmall" type="StaticBody3D" unique_id=763705251]
 
 [node name="table_small2" parent="." unique_id=1907280711 instance=ExtResource("1_0x6ld")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6280365e-05, 0, -0.8465891)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1345917308]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50442326, -0.8377032)
-shape = SubResource("BoxShape3D_rpwcb")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=218535476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0029296875, 0.5047455, -0.8456954)
+shape = SubResource("BoxShape3D_0x6ld")

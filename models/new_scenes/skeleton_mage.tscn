@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ciehtaenly3qd"]
+
+[ext_resource type="PackedScene" uid="uid://dadvwwvym5cx4" path="res://assets/brackeys_3d_game_assets/skeleton/skeleton_mage.glb" id="1_j8i4u"]
+
+[node name="Skeleton Mage" type="StaticBody3D" unique_id=1685075629]
+
+[node name="skeleton_mage" parent="." unique_id=294273984 instance=ExtResource("1_j8i4u")]

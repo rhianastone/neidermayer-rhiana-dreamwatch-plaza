@@ -2,22 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://bxwd3nafyg1fi" path="res://models/props/keg_decorated.glb" id="1_j2uer"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_7vcvq"]
-height = 2.043457
-radius = 1.0
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_e44hj"]
-size = Vector3(1.5825195, 1.870575, 1.6727295)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j2uer"]
+points = PackedVector3Array(1.0494335, 2.0373292, 0.42604613, 1.0503153, 2.0381272, -0.419331, -1.7112149, 1.5493, -0.66651684, -1.4488635, 0.0180125, 0.6977484, 1.4330025, 0.055246234, 0.46739998, 0.2755555, 1.592022, 1.0634174, 1.3866916, 0.9266469, -0.961318, -1.3179922, 1.8724606, 0.47552872, 1.4482878, 1.0334746, 1.0634174, -1.4639666, 0.006972251, -0.69912845, -1.623704, 1.0334746, 0.83984864, 1.6601504, 1.4095176, -0.5341691, 1.4587098, 0.03839926, -0.46739998, -0.53456014, 1.5082234, -0.9465671, -1.8473315, 0.9775783, -0.7239189, 0.9475309, 1.7757157, -0.9510816, -0.05971086, -0.02793169, 0.7281654, 1.1690159, 0.69830453, 1.0634174, -0.56226045, 0.9775783, -1.0035317, -0.79682493, 1.8230325, -0.6804922, 1.6591356, 1.4092958, 0.5400287, 1.009041, 1.728088, 1.0186992, -1.4000764, 1.927192, 0.28102782, 0.92493534, 0.5151682, -0.9290741, 1.6488724, 0.8733985, 0.536983, -1.6793483, 1.5918142, 0.22538853, -0.05971086, -0.02793169, -0.7241213, 1.486974, 1.7266512, 0.48311904, 1.6500045, 0.8732924, -0.5308413, 1.374144, 1.8301024, -0.5275656, 1.2764846, 1.567956, -0.9590028, 0.16356674, 1.2566441, 1.0634174)
 
 [node name="KegDecorated" type="StaticBody3D" unique_id=177983560]
 
 [node name="keg_decorated2" parent="." unique_id=1062522445 instance=ExtResource("1_j2uer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21320462, -1.1920929e-07, -0.7804949)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1299426356]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.853389, 1.1, -0.76176757)
-shape = SubResource("CylinderShape3D_7vcvq")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=773614038]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82013273, 0.9171648, -0.83264923)
-shape = SubResource("BoxShape3D_e44hj")
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1077868134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21320462, -1.1920929e-07, -0.7804949)
+shape = SubResource("ConvexPolygonShape3D_j2uer")

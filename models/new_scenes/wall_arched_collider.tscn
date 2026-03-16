@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d1tsmg2kavr88"]
+
+[ext_resource type="PackedScene" uid="uid://byqtj1n27blwr" path="res://assets/brackeys_3d_game_assets/import_examples/wall_arched_with_collider.glb" id="1_4naap"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ft2jy"]
+size = Vector3(1.0175781, 3.9891968, 1.0180664)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0qeqe"]
+size = Vector3(1.0175781, 3.9891968, 1.0180664)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l0kl6"]
+size = Vector3(4, 1.3000001, 1.0180664)
+
+[node name="Wall Arched Collider" type="StaticBody3D" unique_id=1243605806]
+
+[node name="wall_arched_with_collider" parent="." unique_id=563387099 instance=ExtResource("1_4naap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=567954099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2992616, 2.0041604, 0.9995837)
+shape = SubResource("BoxShape3D_ft2jy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=841043181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7007384, 2.0041604, 0.9995837)
+shape = SubResource("BoxShape3D_0qeqe")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1164474307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20952749, 3.3487587, 0.9995837)
+shape = SubResource("BoxShape3D_l0kl6")

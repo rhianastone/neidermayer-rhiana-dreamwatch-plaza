@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://cc5v1yyqsgfus" path="res://models/building/wall_cracked.glb" id="1_nwqoh"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_y0a5s"]
-size = Vector3(1.1276001, 1, 1.1015625)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nwqoh"]
+points = PackedVector3Array(2, 4, 0.49988496, 1.5947533, 0.293657, 0.6245172, 1.6327329, 0.3081441, 0.6186, 1.7963979, 0.412686, 0.5893835, 2, 0, 0.49988496, 2, 4, -0.5000082, -2, 4, 0.49988496, -1.4009397, 0.3723571, 0.6296948, 1.5947533, 0.2685983, 0.61428535, -1.5861394, 0.30931872, 0.61749053, -2, 0, 0.49988496, 2, 0, -0.5000082, 1.6264682, 0.30383712, -0.6142853, 1.585748, 0.30931872, -0.61761373, 1.4005482, 0.3723571, -0.6296948, -2, 4, -0.5000082, -1.6268598, 0.30383712, 0.6141621, -2, 0, -0.5000082, -1.5951449, 0.2685983, -0.61440855, -1.5951449, 0.293657, -0.6246405, -1.6331245, 0.3081441, -0.6187232, -1.7967894, 0.412686, -0.5895068)
 
 [node name="WallCracked" type="StaticBody3D" unique_id=2081375847]
 
 [node name="wall_cracked2" parent="." unique_id=1578456574 instance=ExtResource("1_nwqoh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1281541767]
-transform = Transform3D(3.5640001, 0, 0, 0, 4.2000003, 0, 0, 0, 1, 0.29541487, 2, -0.04921875)
-shape = SubResource("BoxShape3D_y0a5s")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=706394338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_nwqoh")

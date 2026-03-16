@@ -2,14 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://cfjq67a4061cl" path="res://models/building/wall_doorway.glb" id="1_svexl"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_eadpa"]
-size = Vector3(4.0751953, 4.0314455, 1.0796509)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_svexl"]
+points = PackedVector3Array(1.282141, 2.7718253, 0.11516703, -0.17282984, 0.017255992, -0.099999994, -0.070589244, 0.41488767, -0.23400085, 1.8201, 0.018701646, -0.099907815, 1.369498, 1.2442869, 0.42073965, -0.15774554, 2.3788657, 0.11516703, 1.4568552, 1.375, -0.40862536, -0.20152456, -0.021825314, 0.11516703, 0.19128132, 2.7280722, -0.10305274, 1.770096, 2.3418145, -0.0990543, 1.8496611, -0.021551847, 0.11516703, 1.8496611, 2.1603725, 0.11516703, 1.4568552, 2.7280722, -0.10305274, -0.1634095, 2.1733124, -0.098997794, 0.19128132, 2.7280722, 0.11516703, -0.06429955, 0.46591827, 0.1920009, 0.056126487, 1.7869456, -0.19999999, 1.7187257, 0.41488767, -0.23400085, 1.4568552, 1.3315201, 0.42073965, -0.022584783, 1.8475564, 0.1832696, 1.7187257, 2.5098522, 0.11516703, 1.3259199, 1.2442869, -0.40862536, 1.8119297, 2.1314788, -0.09903861, -0.20152456, 2.204126, 0.11516703, -0.027011096, 2.5970855, 0.11516703, 1.3259199, 1.3315201, -0.40862536, 0.3659956, 2.7718253, 0.11516703, 1.369498, 1.3315201, 0.42073965, 1.413277, 1.2005335, -0.40862536, -0.1267661, 2.3471904, -0.09960997, 1.5442123, 2.6840453, 0.11516703, 1.8060828, 2.3785923, 0.11516703)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eadpa"]
+points = PackedVector3Array(2, 4, 0.49999997, 2, 0, 0.49999997, 2, 4, -0.49999997, -2, 4, 0.49999997, 2, 0, -0.49999997, -2, 0, 0.49999997, -2, 4, -0.49999997, -2, 0, -0.49999997)
 
 [node name="WallDoorway" type="StaticBody3D" unique_id=1419995086]
 
 [node name="wall_doorway2" parent="." unique_id=1616051660 instance=ExtResource("1_svexl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14846325, 0, -0.52894974)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1376431079]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1459961, 2.0068402, -0.5022979)
-shape = SubResource("BoxShape3D_eadpa")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1839939264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9685621, 0, -0.52894974)
+shape = SubResource("ConvexPolygonShape3D_svexl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=587061036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14846325, 0, -0.52894974)
+shape = SubResource("ConvexPolygonShape3D_eadpa")

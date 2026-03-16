@@ -2,13 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://qr13y1dyxcl7" path="res://models/building/wall_archedwindow_gated.glb" id="1_lw507"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_r4c1u"]
-size = Vector3(4.038025, 3.9971313, 1)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lw507"]
+points = PackedVector3Array(2, 4, 0.49999997, 2, 0, 0.49999997, 2, 4, -0.49999997, -2, 4, 0.49999997, 2, 0, -0.49999997, -2, 0, 0.49999997, -2, 4, -0.49999997, -2, 0, -0.49999997)
 
 [node name="ArchWindowGate" type="StaticBody3D" unique_id=771550889]
 
 [node name="wall_archedwindow_gated2" parent="." unique_id=230685659 instance=ExtResource("1_lw507")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=736933728]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013092041, 2.018158, 0)
-shape = SubResource("BoxShape3D_r4c1u")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1920014799]
+shape = SubResource("ConvexPolygonShape3D_lw507")

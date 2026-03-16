@@ -2,13 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://dfrtr8tkl8ycw" path="res://models/building/wall.glb" id="1_ka5hq"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_y3riw"]
-size = Vector3(4, 1.1, 1)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ka5hq"]
+points = PackedVector3Array(2, 4, 0.5, 2, 0, 0.5, 2, 4, -0.5, -2, 4, 0.5, 2, 0, -0.5, -2, 0, 0.5, -2, 4, -0.5, -2, 0, -0.5)
 
 [node name="Wall" type="StaticBody3D" unique_id=1231625068]
 
 [node name="wall2" parent="." unique_id=1984239363 instance=ExtResource("1_ka5hq")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=443062688]
-transform = Transform3D(1, 0, 0, 0, 3.6000001, 0, 0, 0, 1, 0, 2.06, 0)
-shape = SubResource("BoxShape3D_y3riw")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1707251986]
+shape = SubResource("ConvexPolygonShape3D_ka5hq")

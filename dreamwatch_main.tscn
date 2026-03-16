@@ -18,8 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://bax1hv7idgbau" path="res://models/new_scenes/ceiling.tscn" id="16_ynxo1"]
 [ext_resource type="PackedScene" uid="uid://b3r11gayxhum" path="res://models/new_scenes/arch_window_gate.tscn" id="17_51t5v"]
 [ext_resource type="PackedScene" uid="uid://chcg8pbtbc8hf" path="res://models/new_scenes/banner_mounted.tscn" id="18_8m01d"]
+[ext_resource type="PackedScene" uid="uid://bnjs47n50mpy" path="res://models/new_scenes/crates_stacked.tscn" id="19_tfvvd"]
 [ext_resource type="PackedScene" uid="uid://ccq34x1ai707v" path="res://models/new_scenes/wall_t_split.tscn" id="19_yjd40"]
-[ext_resource type="PackedScene" uid="uid://c8oy2m8nbvuig" path="res://Blender imports/chalice.glb" id="20_8m01d"]
+[ext_resource type="PackedScene" uid="uid://d1tsmg2kavr88" path="res://models/new_scenes/wall_arched_collider.tscn" id="20_yjd40"]
+[ext_resource type="PackedScene" uid="uid://bik6uw3qf0463" path="res://models/new_scenes/floorstone.tscn" id="21_bdxym"]
+[ext_resource type="PackedScene" uid="uid://dufu2i2ivurab" path="res://models/new_scenes/wall_window_closed.tscn" id="22_bdxym"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bctdr"]
 sky_top_color = Color(0.6463732, 0.43270832, 0.3979598, 1)
@@ -55,11 +58,9 @@ base_speed = 10.0
 jump_velocity = 8.0
 sprint_speed = 15.0
 
-[node name="Chest" parent="." unique_id=268968661 instance=ExtResource("4_1ng3m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.6, -0.1, -26.100002)
-
-[node name="barrel" parent="." unique_id=2072269902 instance=ExtResource("4_y7k50")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.899994, 0.19999981, -22.400002)
+[node name="Temp Ground" type="CSGBox3D" parent="." unique_id=1634686741]
+transform = Transform3D(2.8999999, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, -57.885006, -4.72083e-07, -11.299501)
+size = Vector3(47.7, 103.4, 0.001)
 
 [node name="floor and border walls" type="CSGCombiner3D" parent="." unique_id=1647776135]
 visible = false
@@ -592,6 +593,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.3, 0, -42)
 [node name="Floorwood101" parent="Wood floor zone 1" unique_id=1281088487 instance=ExtResource("8_hn2wp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.3, 0, -14.1)
 
+[node name="Floorwood110" parent="Wood floor zone 1" unique_id=1128862511 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.3, 0, -12.1)
+
+[node name="Floorwood115" parent="Wood floor zone 1" unique_id=739302067 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89, 0.16, 1.3999996)
+
+[node name="Floorwood116" parent="Wood floor zone 1" unique_id=1136351688 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89, 0.16, -2.6000004)
+
+[node name="Floorwood118" parent="Wood floor zone 1" unique_id=983285865 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0.16, -4.1000004)
+
+[node name="Floorwood119" parent="Wood floor zone 1" unique_id=649707554 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0.16, -8.1)
+
+[node name="Floorwood111" parent="Wood floor zone 1" unique_id=736046433 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, -12.1)
+
+[node name="Floorwood112" parent="Wood floor zone 1" unique_id=893584524 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, -12.1)
+
+[node name="Floorwood113" parent="Wood floor zone 1" unique_id=881350627 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, -12.1)
+
+[node name="Floorwood114" parent="Wood floor zone 1" unique_id=1454955241 instance=ExtResource("8_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, -12.1)
+
 [node name="Floorwood102" parent="Wood floor zone 1" unique_id=668267052 instance=ExtResource("8_hn2wp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.3, 0, -18.1)
 
@@ -642,356 +670,1286 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.99999, -0.099999994, -47.
 [node name="WallHalfEndcap2" parent="wall corners zone 1" unique_id=579483371 instance=ExtResource("6_t3xkd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.99999, 3.9, -47.800007)
 
-[node name="WallShelves" parent="." unique_id=981739393 instance=ExtResource("9_6lh5a")]
+[node name="Inside Walls zone 1" type="Node3D" parent="." unique_id=486309017]
+
+[node name="WallShelves" parent="Inside Walls zone 1" unique_id=981739393 instance=ExtResource("9_6lh5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.3, 0.1, -38.600002)
 
-[node name="WallDoorway" parent="." unique_id=1419995086 instance=ExtResource("10_4acd6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.3, 0.1, -38.7)
+[node name="WallDoorway" parent="Inside Walls zone 1" unique_id=1419995086 instance=ExtResource("10_4acd6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.3, 0.1, -38.600002)
 
-[node name="WallCracked" parent="." unique_id=2081375847 instance=ExtResource("11_h6i2l")]
+[node name="WallCracked" parent="Inside Walls zone 1" unique_id=2081375847 instance=ExtResource("11_h6i2l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.6, 0.1, -39.2)
 
-[node name="WallCorner" parent="." unique_id=1021363220 instance=ExtResource("7_hn2wp")]
+[node name="WallCorner" parent="Inside Walls zone 1" unique_id=1021363220 instance=ExtResource("7_hn2wp")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -98, 0.1, -39.4)
 
-[node name="WallCracked2" parent="." unique_id=453219455 instance=ExtResource("11_h6i2l")]
+[node name="WallCracked2" parent="Inside Walls zone 1" unique_id=453219455 instance=ExtResource("11_h6i2l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -98.100006, 0.1, -43.3)
 
-[node name="TableMedium" parent="." unique_id=806134273 instance=ExtResource("12_ag8t6")]
+[node name="TableMedium" parent="Inside Walls zone 1" unique_id=806134273 instance=ExtResource("12_ag8t6")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.299995, 0.1, -46.199997)
 
-[node name="PlateofFood" parent="." unique_id=1936362512 instance=ExtResource("13_ynxo1")]
+[node name="PlateofFood" parent="Inside Walls zone 1" unique_id=1936362512 instance=ExtResource("13_ynxo1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 1.1, -45.7)
 
-[node name="TorchMounted" parent="." unique_id=1434740812 instance=ExtResource("14_4acd6")]
+[node name="TorchMounted" parent="Inside Walls zone 1" unique_id=1434740812 instance=ExtResource("14_4acd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.5, 1.5999999, -48)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="TorchMounted" unique_id=763142444]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Inside Walls zone 1/TorchMounted" unique_id=763142444]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06439209, 0.70000005, 0.099998474)
 light_color = Color(0.3764706, 1, 1, 1)
 
-[node name="TorchMounted2" parent="." unique_id=495134147 instance=ExtResource("14_4acd6")]
+[node name="TorchMounted2" parent="Inside Walls zone 1" unique_id=495134147 instance=ExtResource("14_4acd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84.5, 1.5999999, -48)
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="TorchMounted2" unique_id=789325761]
+[node name="OmniLight3D3" type="OmniLight3D" parent="Inside Walls zone 1/TorchMounted2" unique_id=789325761]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06439209, 0.70000005, 0.099998474)
 light_color = Color(0.3764706, 1, 1, 1)
 
-[node name="TorchMounted3" parent="." unique_id=942827866 instance=ExtResource("14_4acd6")]
+[node name="TorchMounted3" parent="Inside Walls zone 1" unique_id=942827866 instance=ExtResource("14_4acd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95.1, 1.5999999, -48)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="TorchMounted3" unique_id=6535197]
+[node name="OmniLight3D" type="OmniLight3D" parent="Inside Walls zone 1/TorchMounted3" unique_id=6535197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035606384, 0.70000005, 0.099998474)
 light_color = Color(0.3764706, 1, 1, 1)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1634686741]
-transform = Transform3D(2.8999999, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, -57.885006, -4.72083e-07, -11.299501)
-size = Vector3(47.7, 103.4, 0.001)
+[node name="Chest" parent="Inside Walls zone 1" unique_id=268968661 instance=ExtResource("4_1ng3m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -112.5, 0.1, -17.000002)
+
+[node name="barrel" parent="Inside Walls zone 1" unique_id=2072269902 instance=ExtResource("4_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112.399994, 0.19999981, -13.900001)
 
 [node name="Pillar" parent="." unique_id=478311847 instance=ExtResource("15_ag8t6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.8, -0.1, -9.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.200005, -0.1, 0.70000017)
 
 [node name="Pillar2" parent="." unique_id=2093011292 instance=ExtResource("15_ag8t6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.8, 3.9000003, -9.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.200005, 3.9000003, 0.70000017)
 
 [node name="Pillar3" parent="." unique_id=1443561050 instance=ExtResource("15_ag8t6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.3, -0.1, -15.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -117.90001, -0.100000024, -11.900001)
 
 [node name="Pillar4" parent="." unique_id=600438211 instance=ExtResource("15_ag8t6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.3, 3.9000003, -15.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -117.90001, 3.9, -11.900001)
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1923122980]
+[node name="Pillar13" parent="." unique_id=134584808 instance=ExtResource("15_ag8t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.30001, -0.1, -11.8)
 
-[node name="Ceiling" parent="Node3D" unique_id=932846257 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -28.7)
+[node name="Pillar14" parent="." unique_id=1610753748 instance=ExtResource("15_ag8t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.30001, 3.9000003, -11.8)
 
-[node name="Ceiling2" parent="Node3D" unique_id=631864597 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -28.7)
+[node name="Pillar7" parent="." unique_id=1236488211 instance=ExtResource("15_ag8t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.50001, 0, 27.399998)
 
-[node name="Ceiling3" parent="Node3D" unique_id=2034484783 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -28.7)
+[node name="Pillar8" parent="." unique_id=1168048934 instance=ExtResource("15_ag8t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.50001, 4.0000005, 27.399998)
 
-[node name="Ceiling4" parent="Node3D" unique_id=1126224482 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -28.7)
+[node name="Ceiling" type="Node3D" parent="." unique_id=1923122980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
 
-[node name="Ceiling5" parent="Node3D" unique_id=971994820 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -28.7)
+[node name="Ceiling" parent="Ceiling" unique_id=932846257 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.159996, 7.9000006, -30)
 
-[node name="Ceiling6" parent="Node3D" unique_id=1243085523 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -28.7)
+[node name="Ceiling2" parent="Ceiling" unique_id=631864597 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.159996, 7.9000006, -30)
 
-[node name="Ceiling7" parent="Node3D" unique_id=775732635 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -28.7)
+[node name="Ceiling3" parent="Ceiling" unique_id=2034484783 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.159996, 7.9000006, -30)
 
-[node name="Ceiling8" parent="Node3D" unique_id=275919245 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -28.7)
+[node name="Ceiling4" parent="Ceiling" unique_id=1126224482 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.159996, 7.9000006, -30)
 
-[node name="Ceiling9" parent="Node3D" unique_id=1406479750 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -28.7)
+[node name="Ceiling5" parent="Ceiling" unique_id=971994820 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.159996, 7.9000006, -30)
 
-[node name="Ceiling10" parent="Node3D" unique_id=55508605 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -28.7)
+[node name="Ceiling6" parent="Ceiling" unique_id=1243085523 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.159996, 7.9000006, -30)
 
-[node name="Ceiling11" parent="Node3D" unique_id=2047716548 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -32.7)
+[node name="Ceiling11" parent="Ceiling" unique_id=2047716548 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.149994, 7.9000006, -33.99)
 
-[node name="Ceiling12" parent="Node3D" unique_id=274905739 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -32.7)
+[node name="Ceiling12" parent="Ceiling" unique_id=274905739 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.159996, 7.9000006, -34)
 
-[node name="Ceiling13" parent="Node3D" unique_id=188028934 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -32.7)
+[node name="Ceiling13" parent="Ceiling" unique_id=188028934 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.159996, 7.9000006, -34)
 
-[node name="Ceiling14" parent="Node3D" unique_id=424263651 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -32.7)
+[node name="Ceiling14" parent="Ceiling" unique_id=424263651 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.159996, 7.9000006, -34)
 
-[node name="Ceiling15" parent="Node3D" unique_id=1475123249 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -32.7)
+[node name="Ceiling15" parent="Ceiling" unique_id=1475123249 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.159996, 7.9000006, -34)
 
-[node name="Ceiling16" parent="Node3D" unique_id=1960193889 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -32.7)
+[node name="Ceiling16" parent="Ceiling" unique_id=1960193889 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.159996, 7.9000006, -34)
 
-[node name="Ceiling17" parent="Node3D" unique_id=1208997551 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -32.7)
+[node name="Ceiling21" parent="Ceiling" unique_id=1546112032 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.2, 7.9000006, -38)
 
-[node name="Ceiling18" parent="Node3D" unique_id=1714894733 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -32.7)
+[node name="Ceiling22" parent="Ceiling" unique_id=603336784 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.2, 7.9000006, -38)
 
-[node name="Ceiling19" parent="Node3D" unique_id=130402643 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -32.7)
+[node name="Ceiling23" parent="Ceiling" unique_id=735452633 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.2, 7.9000006, -38)
 
-[node name="Ceiling20" parent="Node3D" unique_id=1902073650 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -32.7)
+[node name="Ceiling24" parent="Ceiling" unique_id=85358422 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.2, 7.9000006, -38)
 
-[node name="Ceiling21" parent="Node3D" unique_id=1546112032 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -36.8)
+[node name="Ceiling25" parent="Ceiling" unique_id=1348683176 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.2, 7.9000006, -38)
 
-[node name="Ceiling22" parent="Node3D" unique_id=603336784 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -36.8)
+[node name="Ceiling26" parent="Ceiling" unique_id=1691009861 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.2, 7.9000006, -38)
 
-[node name="Ceiling23" parent="Node3D" unique_id=735452633 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -36.8)
+[node name="Ceiling31" parent="Ceiling" unique_id=1322188640 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.2, 7.9000006, -42)
 
-[node name="Ceiling24" parent="Node3D" unique_id=85358422 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -36.8)
+[node name="Ceiling32" parent="Ceiling" unique_id=242158169 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.2, 7.9000006, -42)
 
-[node name="Ceiling25" parent="Node3D" unique_id=1348683176 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -36.8)
+[node name="Ceiling33" parent="Ceiling" unique_id=690751845 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.2, 7.9000006, -42)
 
-[node name="Ceiling26" parent="Node3D" unique_id=1691009861 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -36.8)
+[node name="Ceiling34" parent="Ceiling" unique_id=320539088 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.2, 7.9000006, -42)
 
-[node name="Ceiling27" parent="Node3D" unique_id=433033517 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -36.8)
+[node name="Ceiling35" parent="Ceiling" unique_id=1490839108 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.2, 7.9000006, -42)
 
-[node name="Ceiling28" parent="Node3D" unique_id=1413567249 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -36.8)
+[node name="Ceiling36" parent="Ceiling" unique_id=534404221 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.2, 7.9000006, -42)
 
-[node name="Ceiling29" parent="Node3D" unique_id=1275008456 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -36.8)
+[node name="Ceiling41" parent="Ceiling" unique_id=1126549258 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.2, 7.9000006, -46)
 
-[node name="Ceiling30" parent="Node3D" unique_id=1408255843 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -36.8)
+[node name="Ceiling42" parent="Ceiling" unique_id=504298383 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.2, 7.9000006, -46)
 
-[node name="Ceiling31" parent="Node3D" unique_id=1322188640 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -41)
+[node name="Ceiling43" parent="Ceiling" unique_id=2087876159 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.2, 7.9000006, -46)
 
-[node name="Ceiling32" parent="Node3D" unique_id=242158169 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -41)
+[node name="Ceiling44" parent="Ceiling" unique_id=521391819 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.2, 7.9000006, -46)
 
-[node name="Ceiling33" parent="Node3D" unique_id=690751845 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -41)
+[node name="Ceiling45" parent="Ceiling" unique_id=496769176 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.2, 7.9000006, -46)
 
-[node name="Ceiling34" parent="Node3D" unique_id=320539088 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -41)
+[node name="Ceiling46" parent="Ceiling" unique_id=631723258 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.2, 7.9000006, -46)
 
-[node name="Ceiling35" parent="Node3D" unique_id=1490839108 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -41)
+[node name="Ceiling51" parent="Ceiling" unique_id=2122273336 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling36" parent="Node3D" unique_id=534404221 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -41)
+[node name="Ceiling52" parent="Ceiling" unique_id=1118629890 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling37" parent="Node3D" unique_id=66221305 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -41)
+[node name="Ceiling53" parent="Ceiling" unique_id=411335551 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling38" parent="Node3D" unique_id=107647385 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -41)
+[node name="Ceiling54" parent="Ceiling" unique_id=1944107591 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling39" parent="Node3D" unique_id=918125002 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -41)
+[node name="Ceiling55" parent="Ceiling" unique_id=1047878796 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling40" parent="Node3D" unique_id=718448137 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -41)
+[node name="Ceiling56" parent="Ceiling" unique_id=2105576105 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling41" parent="Node3D" unique_id=1126549258 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -45.3)
+[node name="Ceiling61" parent="Ceiling" unique_id=1174683581 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling42" parent="Node3D" unique_id=504298383 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -45.3)
+[node name="Ceiling62" parent="Ceiling" unique_id=850820328 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling43" parent="Node3D" unique_id=2087876159 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -45.3)
+[node name="Ceiling63" parent="Ceiling" unique_id=743068179 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling44" parent="Node3D" unique_id=521391819 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -45.3)
+[node name="Ceiling64" parent="Ceiling" unique_id=432445941 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling45" parent="Node3D" unique_id=496769176 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -45.3)
+[node name="Ceiling65" parent="Ceiling" unique_id=29700630 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling46" parent="Node3D" unique_id=631723258 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -45.3)
+[node name="Ceiling66" parent="Ceiling" unique_id=1334055434 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling47" parent="Node3D" unique_id=737070195 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -45.3)
+[node name="Ceiling71" parent="Ceiling" unique_id=1148367246 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling48" parent="Node3D" unique_id=958029322 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -45.3)
+[node name="Ceiling72" parent="Ceiling" unique_id=2131283626 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling49" parent="Node3D" unique_id=665099768 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -45.3)
+[node name="Ceiling73" parent="Ceiling" unique_id=1899080074 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling50" parent="Node3D" unique_id=1486848344 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -45.3)
+[node name="Ceiling74" parent="Ceiling" unique_id=1206879819 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling51" parent="Node3D" unique_id=2122273336 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -24.999998)
+[node name="Ceiling75" parent="Ceiling" unique_id=1805586121 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling52" parent="Node3D" unique_id=1118629890 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -24.999998)
+[node name="Ceiling76" parent="Ceiling" unique_id=1894512135 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling53" parent="Node3D" unique_id=411335551 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -24.999998)
+[node name="Ceiling81" parent="Ceiling" unique_id=905479751 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.159996, 7.9000006, -13.999997)
 
-[node name="Ceiling54" parent="Node3D" unique_id=1944107591 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -24.999998)
+[node name="Ceiling82" parent="Ceiling" unique_id=786839837 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.159996, 7.9000006, -13.999997)
 
-[node name="Ceiling55" parent="Node3D" unique_id=1047878796 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -24.999998)
+[node name="Ceiling83" parent="Ceiling" unique_id=2101644463 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.159996, 7.9000006, -13.999997)
 
-[node name="Ceiling56" parent="Node3D" unique_id=2105576105 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -24.999998)
+[node name="Ceiling84" parent="Ceiling" unique_id=676105757 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.159996, 7.9000006, -13.999997)
 
-[node name="Ceiling57" parent="Node3D" unique_id=1456475551 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -24.999998)
+[node name="Ceiling85" parent="Ceiling" unique_id=2132298438 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.159996, 7.9000006, -13.999997)
 
-[node name="Ceiling58" parent="Node3D" unique_id=163217608 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -24.999998)
+[node name="Ceiling86" parent="Ceiling" unique_id=197955471 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.159996, 7.9000006, -13.999997)
 
-[node name="Ceiling59" parent="Node3D" unique_id=765830989 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -24.999998)
+[node name="Ceiling7" parent="Ceiling" unique_id=735412476 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.159996, 7.9000006, -30)
 
-[node name="Ceiling60" parent="Node3D" unique_id=723711722 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -24.999998)
+[node name="Ceiling17" parent="Ceiling" unique_id=1508801296 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.159996, 7.9000006, -34)
 
-[node name="Ceiling61" parent="Node3D" unique_id=1174683581 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -21.299997)
+[node name="Ceiling27" parent="Ceiling" unique_id=275203984 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.2, 7.9000006, -38)
 
-[node name="Ceiling62" parent="Node3D" unique_id=850820328 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -21.299997)
+[node name="Ceiling37" parent="Ceiling" unique_id=454856703 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.2, 7.9000006, -42)
 
-[node name="Ceiling63" parent="Node3D" unique_id=743068179 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -21.299997)
+[node name="Ceiling47" parent="Ceiling" unique_id=1875572837 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.2, 7.9000006, -46)
 
-[node name="Ceiling64" parent="Node3D" unique_id=432445941 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -21.299997)
+[node name="Ceiling57" parent="Ceiling" unique_id=1442939016 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling65" parent="Node3D" unique_id=29700630 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -21.299997)
+[node name="Ceiling67" parent="Ceiling" unique_id=544456491 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling66" parent="Node3D" unique_id=1334055434 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -21.299997)
+[node name="Ceiling77" parent="Ceiling" unique_id=1088404279 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling67" parent="Node3D" unique_id=795241896 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -21.299997)
+[node name="Ceiling87" parent="Ceiling" unique_id=358505214 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.159996, 7.9000006, -13.999997)
 
-[node name="Ceiling68" parent="Node3D" unique_id=536686006 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -21.299997)
+[node name="Ceiling8" parent="Ceiling" unique_id=1773225994 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.159996, 7.9000006, -30)
 
-[node name="Ceiling69" parent="Node3D" unique_id=357937088 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -21.299997)
+[node name="Ceiling18" parent="Ceiling" unique_id=971889744 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.159996, 7.9000006, -34)
 
-[node name="Ceiling70" parent="Node3D" unique_id=1499205263 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -21.299997)
+[node name="Ceiling28" parent="Ceiling" unique_id=791358143 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.2, 7.9000006, -38)
 
-[node name="Ceiling71" parent="Node3D" unique_id=1148367246 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -17.599997)
+[node name="Ceiling38" parent="Ceiling" unique_id=1951983392 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.2, 7.9000006, -42)
 
-[node name="Ceiling72" parent="Node3D" unique_id=2131283626 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -17.599997)
+[node name="Ceiling48" parent="Ceiling" unique_id=929508085 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.2, 7.9000006, -46)
 
-[node name="Ceiling73" parent="Node3D" unique_id=1899080074 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -17.599997)
+[node name="Ceiling58" parent="Ceiling" unique_id=526577105 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling74" parent="Node3D" unique_id=1206879819 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -17.599997)
+[node name="Ceiling68" parent="Ceiling" unique_id=1142597955 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling75" parent="Node3D" unique_id=1805586121 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -17.599997)
+[node name="Ceiling78" parent="Ceiling" unique_id=1804599375 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling76" parent="Node3D" unique_id=1894512135 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -17.599997)
+[node name="Ceiling88" parent="Ceiling" unique_id=922876756 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.159996, 7.9000006, -13.999997)
 
-[node name="Ceiling77" parent="Node3D" unique_id=1338751072 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -17.599997)
+[node name="Ceiling9" parent="Ceiling" unique_id=1329500356 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.159996, 7.9000006, -30)
 
-[node name="Ceiling78" parent="Node3D" unique_id=931631680 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -17.599997)
+[node name="Ceiling19" parent="Ceiling" unique_id=306018560 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.159996, 7.9000006, -34)
 
-[node name="Ceiling79" parent="Node3D" unique_id=863298313 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -17.599997)
+[node name="Ceiling29" parent="Ceiling" unique_id=1138379225 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.2, 7.9000006, -38)
 
-[node name="Ceiling80" parent="Node3D" unique_id=541787222 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -17.599997)
+[node name="Ceiling39" parent="Ceiling" unique_id=451258848 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.2, 7.9000006, -42)
 
-[node name="Ceiling81" parent="Node3D" unique_id=905479751 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.1, 7.9000006, -13.599997)
+[node name="Ceiling49" parent="Ceiling" unique_id=1960124859 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.2, 7.9000006, -46)
 
-[node name="Ceiling82" parent="Node3D" unique_id=786839837 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.1, 7.9000006, -13.599997)
+[node name="Ceiling59" parent="Ceiling" unique_id=578857915 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.159996, 7.9000006, -25.999998)
 
-[node name="Ceiling83" parent="Node3D" unique_id=2101644463 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.1, 7.9000006, -13.599997)
+[node name="Ceiling69" parent="Ceiling" unique_id=266073915 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.159996, 7.9000006, -21.999996)
 
-[node name="Ceiling84" parent="Node3D" unique_id=676105757 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.1, 7.9000006, -13.599997)
+[node name="Ceiling79" parent="Ceiling" unique_id=1010641155 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.159996, 7.9000006, -17.999996)
 
-[node name="Ceiling85" parent="Node3D" unique_id=2132298438 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.1, 7.9000006, -13.599997)
-
-[node name="Ceiling86" parent="Node3D" unique_id=197955471 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.1, 7.9000006, -13.599997)
-
-[node name="Ceiling87" parent="Node3D" unique_id=2074032432 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -13.599997)
-
-[node name="Ceiling88" parent="Node3D" unique_id=380244206 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.799995, 7.9000006, -13.599997)
-
-[node name="Ceiling89" parent="Node3D" unique_id=173812329 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.77556, 7.9000006, -13.599997)
-
-[node name="Ceiling90" parent="Node3D" unique_id=1624827685 instance=ExtResource("16_ynxo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.77556, 7.9000006, -13.599997)
-
-[node name="ArchWindowGate" parent="." unique_id=771550889 instance=ExtResource("17_51t5v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.6, 0.2, 22.1)
-
-[node name="ArchWindowGate2" parent="." unique_id=147225282 instance=ExtResource("17_51t5v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.799995, 0.2, 22.1)
-
-[node name="ArchWindowGate3" parent="." unique_id=30401299 instance=ExtResource("17_51t5v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.2, 0.2, 22.1)
-
-[node name="ArchWindowGate4" parent="." unique_id=1229049347 instance=ExtResource("17_51t5v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85.5, 0.2, 22.1)
-
-[node name="ArchWindowGate5" parent="." unique_id=871480731 instance=ExtResource("17_51t5v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.5, 0.2, 22.1)
+[node name="Ceiling89" parent="Ceiling" unique_id=723496430 instance=ExtResource("16_ynxo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.159996, 7.9000006, -13.999997)
 
 [node name="BannerMounted" parent="." unique_id=525193464 instance=ExtResource("18_8m01d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.100006, 3.5999994, -11.100001)
 
-[node name="WallTSplit" parent="." unique_id=1050420312 instance=ExtResource("19_yjd40")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -78, 0.20000002, 20.1)
+[node name="BannerMounted2" parent="." unique_id=508886656 instance=ExtResource("18_8m01d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.200005, 3.5999994, -11.100001)
 
-[node name="chalice" parent="." unique_id=1448553845 instance=ExtResource("20_8m01d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.4, 0.100000024, -33.4)
+[node name="Outside floorstone zone 1" type="Node3D" parent="." unique_id=71148349]
+
+[node name="Floorstone" parent="Outside floorstone zone 1" unique_id=1071518670 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 4.6)
+
+[node name="Floorstone2" parent="Outside floorstone zone 1" unique_id=131079167 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 4.6)
+
+[node name="Floorstone3" parent="Outside floorstone zone 1" unique_id=693326738 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 4.6)
+
+[node name="Floorstone4" parent="Outside floorstone zone 1" unique_id=1161757513 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 4.6)
+
+[node name="Floorstone5" parent="Outside floorstone zone 1" unique_id=1458512829 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 4.6)
+
+[node name="Floorstone6" parent="Outside floorstone zone 1" unique_id=1863473802 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 4.6)
+
+[node name="Floorstone7" parent="Outside floorstone zone 1" unique_id=1112219192 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 8.6)
+
+[node name="Floorstone8" parent="Outside floorstone zone 1" unique_id=357910985 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 8.6)
+
+[node name="Floorstone9" parent="Outside floorstone zone 1" unique_id=813060078 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 8.6)
+
+[node name="Floorstone10" parent="Outside floorstone zone 1" unique_id=1651592207 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 8.6)
+
+[node name="Floorstone11" parent="Outside floorstone zone 1" unique_id=1251679058 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 8.6)
+
+[node name="Floorstone12" parent="Outside floorstone zone 1" unique_id=1521831094 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 8.6)
+
+[node name="Floorstone13" parent="Outside floorstone zone 1" unique_id=1565939493 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 12.5)
+
+[node name="Floorstone14" parent="Outside floorstone zone 1" unique_id=923889370 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 12.5)
+
+[node name="Floorstone15" parent="Outside floorstone zone 1" unique_id=531326835 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 12.5)
+
+[node name="Floorstone16" parent="Outside floorstone zone 1" unique_id=2003055116 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 12.5)
+
+[node name="Floorstone17" parent="Outside floorstone zone 1" unique_id=950866794 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 12.5)
+
+[node name="Floorstone18" parent="Outside floorstone zone 1" unique_id=122280898 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 12.5)
+
+[node name="Floorstone19" parent="Outside floorstone zone 1" unique_id=1969599072 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 16.5)
+
+[node name="Floorstone20" parent="Outside floorstone zone 1" unique_id=348076868 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 16.5)
+
+[node name="Floorstone21" parent="Outside floorstone zone 1" unique_id=355992071 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 16.5)
+
+[node name="Floorstone22" parent="Outside floorstone zone 1" unique_id=741996129 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 16.5)
+
+[node name="Floorstone23" parent="Outside floorstone zone 1" unique_id=1746205934 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 16.5)
+
+[node name="Floorstone24" parent="Outside floorstone zone 1" unique_id=1836968239 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 16.5)
+
+[node name="Floorstone25" parent="Outside floorstone zone 1" unique_id=2113384619 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 20.5)
+
+[node name="Floorstone26" parent="Outside floorstone zone 1" unique_id=965234539 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 20.5)
+
+[node name="Floorstone27" parent="Outside floorstone zone 1" unique_id=660663060 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 20.5)
+
+[node name="Floorstone28" parent="Outside floorstone zone 1" unique_id=169742787 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 20.5)
+
+[node name="Floorstone29" parent="Outside floorstone zone 1" unique_id=2007824937 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 20.5)
+
+[node name="Floorstone30" parent="Outside floorstone zone 1" unique_id=1180516381 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 20.5)
+
+[node name="Outside floorstone zone 2" type="Node3D" parent="." unique_id=733987676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4, 0, -14.099999)
+
+[node name="Floorstone" parent="Outside floorstone zone 2" unique_id=1230065603 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 4.6)
+
+[node name="Floorstone2" parent="Outside floorstone zone 2" unique_id=1394038551 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 4.6)
+
+[node name="Floorstone3" parent="Outside floorstone zone 2" unique_id=1416887870 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 4.6)
+
+[node name="Floorstone4" parent="Outside floorstone zone 2" unique_id=1004444810 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 4.6)
+
+[node name="Floorstone5" parent="Outside floorstone zone 2" unique_id=527132789 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 4.6)
+
+[node name="Floorstone6" parent="Outside floorstone zone 2" unique_id=1220296228 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.3, 0, 4.7)
+
+[node name="Floorstone7" parent="Outside floorstone zone 2" unique_id=1737112582 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 8.6)
+
+[node name="Floorstone8" parent="Outside floorstone zone 2" unique_id=276009021 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 8.6)
+
+[node name="Floorstone9" parent="Outside floorstone zone 2" unique_id=1654502022 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 8.6)
+
+[node name="Floorstone10" parent="Outside floorstone zone 2" unique_id=274747144 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 8.6)
+
+[node name="Floorstone11" parent="Outside floorstone zone 2" unique_id=2024353788 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 8.6)
+
+[node name="Floorstone12" parent="Outside floorstone zone 2" unique_id=1036541782 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 8.6)
+
+[node name="Floorstone13" parent="Outside floorstone zone 2" unique_id=663459129 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 12.5)
+
+[node name="Floorstone14" parent="Outside floorstone zone 2" unique_id=1866663962 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 12.5)
+
+[node name="Floorstone15" parent="Outside floorstone zone 2" unique_id=1493725888 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 12.5)
+
+[node name="Floorstone16" parent="Outside floorstone zone 2" unique_id=1070537266 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 12.5)
+
+[node name="Floorstone17" parent="Outside floorstone zone 2" unique_id=997208854 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 12.5)
+
+[node name="Floorstone18" parent="Outside floorstone zone 2" unique_id=1661060685 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 12.5)
+
+[node name="Floorstone19" parent="Outside floorstone zone 2" unique_id=1691324450 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 16.5)
+
+[node name="Floorstone20" parent="Outside floorstone zone 2" unique_id=1872679580 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 16.5)
+
+[node name="Floorstone21" parent="Outside floorstone zone 2" unique_id=1855550339 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 16.5)
+
+[node name="Floorstone22" parent="Outside floorstone zone 2" unique_id=412932082 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 16.5)
+
+[node name="Floorstone23" parent="Outside floorstone zone 2" unique_id=1181192143 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 16.5)
+
+[node name="Floorstone24" parent="Outside floorstone zone 2" unique_id=1923292172 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 16.5)
+
+[node name="Floorstone25" parent="Outside floorstone zone 2" unique_id=1476932035 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 20.5)
+
+[node name="Floorstone26" parent="Outside floorstone zone 2" unique_id=316116446 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 20.5)
+
+[node name="Floorstone27" parent="Outside floorstone zone 2" unique_id=2026693578 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 20.5)
+
+[node name="Floorstone28" parent="Outside floorstone zone 2" unique_id=1881632048 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 20.5)
+
+[node name="Floorstone29" parent="Outside floorstone zone 2" unique_id=1939234332 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 20.5)
+
+[node name="Floorstone30" parent="Outside floorstone zone 2" unique_id=1184338009 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 20.5)
+
+[node name="Outside floorstone zone 3" type="Node3D" parent="." unique_id=490107072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4, 0, 5.700001)
+
+[node name="Floorstone" parent="Outside floorstone zone 3" unique_id=481137053 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 4.6)
+
+[node name="Floorstone2" parent="Outside floorstone zone 3" unique_id=2020174774 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 4.6)
+
+[node name="Floorstone3" parent="Outside floorstone zone 3" unique_id=411535476 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 4.6)
+
+[node name="Floorstone4" parent="Outside floorstone zone 3" unique_id=383161344 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 4.6)
+
+[node name="Floorstone5" parent="Outside floorstone zone 3" unique_id=970380223 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 4.6)
+
+[node name="Floorstone6" parent="Outside floorstone zone 3" unique_id=982764365 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 4.6)
+
+[node name="Floorstone7" parent="Outside floorstone zone 3" unique_id=291953417 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 8.6)
+
+[node name="Floorstone8" parent="Outside floorstone zone 3" unique_id=2078642793 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 8.6)
+
+[node name="Floorstone9" parent="Outside floorstone zone 3" unique_id=137968602 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 8.6)
+
+[node name="Floorstone10" parent="Outside floorstone zone 3" unique_id=404835090 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 8.6)
+
+[node name="Floorstone11" parent="Outside floorstone zone 3" unique_id=306381351 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 8.6)
+
+[node name="Floorstone12" parent="Outside floorstone zone 3" unique_id=876243479 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 8.6)
+
+[node name="Floorstone13" parent="Outside floorstone zone 3" unique_id=47082596 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 12.5)
+
+[node name="Floorstone14" parent="Outside floorstone zone 3" unique_id=1461043061 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 12.5)
+
+[node name="Floorstone15" parent="Outside floorstone zone 3" unique_id=735617433 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 12.5)
+
+[node name="Floorstone16" parent="Outside floorstone zone 3" unique_id=419586722 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 12.5)
+
+[node name="Floorstone17" parent="Outside floorstone zone 3" unique_id=895199623 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 12.5)
+
+[node name="Floorstone18" parent="Outside floorstone zone 3" unique_id=2137820506 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 12.5)
+
+[node name="Floorstone19" parent="Outside floorstone zone 3" unique_id=606786366 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 16.5)
+
+[node name="Floorstone20" parent="Outside floorstone zone 3" unique_id=22031713 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 16.5)
+
+[node name="Floorstone21" parent="Outside floorstone zone 3" unique_id=1775284442 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 16.5)
+
+[node name="Floorstone22" parent="Outside floorstone zone 3" unique_id=318867764 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 16.5)
+
+[node name="Floorstone23" parent="Outside floorstone zone 3" unique_id=1448325739 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 16.5)
+
+[node name="Floorstone24" parent="Outside floorstone zone 3" unique_id=170306396 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 16.5)
+
+[node name="Floorstone25" parent="Outside floorstone zone 3" unique_id=402702457 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.100006, 0, 20.5)
+
+[node name="Floorstone26" parent="Outside floorstone zone 3" unique_id=1413495583 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.100006, 0, 20.5)
+
+[node name="Floorstone27" parent="Outside floorstone zone 3" unique_id=813560390 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.100006, 0, 20.5)
+
+[node name="Floorstone28" parent="Outside floorstone zone 3" unique_id=700873017 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.100006, 0, 20.5)
+
+[node name="Floorstone29" parent="Outside floorstone zone 3" unique_id=208905390 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.100006, 0, 20.5)
+
+[node name="Floorstone30" parent="Outside floorstone zone 3" unique_id=1122909911 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.100006, 0, 20.5)
+
+[node name="Outside floorstone zone 4" type="Node3D" parent="." unique_id=509281580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1, 0, -20.6)
+
+[node name="Floorstone" parent="Outside floorstone zone 4" unique_id=530676800 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 4.6000004)
+
+[node name="Floorstone2" parent="Outside floorstone zone 4" unique_id=1085871808 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 4.6000004)
+
+[node name="Floorstone3" parent="Outside floorstone zone 4" unique_id=89665920 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 4.6000004)
+
+[node name="Floorstone4" parent="Outside floorstone zone 4" unique_id=1714564335 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 4.6000004)
+
+[node name="Floorstone5" parent="Outside floorstone zone 4" unique_id=65463619 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 4.6000004)
+
+[node name="Floorstone6" parent="Outside floorstone zone 4" unique_id=825577223 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 4.6000004)
+
+[node name="Floorstone7" parent="Outside floorstone zone 4" unique_id=764779770 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 8.6)
+
+[node name="Floorstone8" parent="Outside floorstone zone 4" unique_id=984283147 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 8.6)
+
+[node name="Floorstone9" parent="Outside floorstone zone 4" unique_id=698018853 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 8.6)
+
+[node name="Floorstone10" parent="Outside floorstone zone 4" unique_id=165084787 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 8.6)
+
+[node name="Floorstone11" parent="Outside floorstone zone 4" unique_id=272820143 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 8.6)
+
+[node name="Floorstone12" parent="Outside floorstone zone 4" unique_id=1503297241 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 8.6)
+
+[node name="Floorstone13" parent="Outside floorstone zone 4" unique_id=40125187 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 12.5)
+
+[node name="Floorstone14" parent="Outside floorstone zone 4" unique_id=592380886 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 12.5)
+
+[node name="Floorstone15" parent="Outside floorstone zone 4" unique_id=2145928064 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 12.5)
+
+[node name="Floorstone16" parent="Outside floorstone zone 4" unique_id=224694328 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 12.5)
+
+[node name="Floorstone17" parent="Outside floorstone zone 4" unique_id=740197592 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 12.5)
+
+[node name="Floorstone18" parent="Outside floorstone zone 4" unique_id=766566892 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 12.5)
+
+[node name="Floorstone32" parent="Outside floorstone zone 4" unique_id=783205421 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.20001, 0, 12.5)
+
+[node name="Floorstone33" parent="Outside floorstone zone 4" unique_id=234103186 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.20001, 0, 12.5)
+
+[node name="Floorstone34" parent="Outside floorstone zone 4" unique_id=984769631 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.20001, 0, 12.5)
+
+[node name="Floorstone35" parent="Outside floorstone zone 4" unique_id=1036733072 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.20001, 0, 12.5)
+
+[node name="Floorstone36" parent="Outside floorstone zone 4" unique_id=1620075635 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.20001, 0, 12.5)
+
+[node name="Floorstone37" parent="Outside floorstone zone 4" unique_id=2100423722 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.20001, 0, 16.5)
+
+[node name="Floorstone38" parent="Outside floorstone zone 4" unique_id=888969165 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.20001, 0, 16.5)
+
+[node name="Floorstone39" parent="Outside floorstone zone 4" unique_id=2013634134 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.20001, 0, 16.5)
+
+[node name="Floorstone40" parent="Outside floorstone zone 4" unique_id=1337491106 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.20001, 0, 16.5)
+
+[node name="Floorstone41" parent="Outside floorstone zone 4" unique_id=1646717121 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.20001, 0, 16.5)
+
+[node name="Floorstone42" parent="Outside floorstone zone 4" unique_id=695924179 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.20001, 0, 20.4)
+
+[node name="Floorstone43" parent="Outside floorstone zone 4" unique_id=2038164590 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.20001, 0, 20.4)
+
+[node name="Floorstone44" parent="Outside floorstone zone 4" unique_id=849155022 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.20001, 0, 20.4)
+
+[node name="Floorstone45" parent="Outside floorstone zone 4" unique_id=825217110 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.20001, 0, 20.4)
+
+[node name="Floorstone46" parent="Outside floorstone zone 4" unique_id=1481672170 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.20001, 0, 20.4)
+
+[node name="Floorstone19" parent="Outside floorstone zone 4" unique_id=1816610519 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 16.5)
+
+[node name="Floorstone20" parent="Outside floorstone zone 4" unique_id=1936470922 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 16.5)
+
+[node name="Floorstone21" parent="Outside floorstone zone 4" unique_id=1093800394 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 16.5)
+
+[node name="Floorstone22" parent="Outside floorstone zone 4" unique_id=2002208359 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 16.5)
+
+[node name="Floorstone23" parent="Outside floorstone zone 4" unique_id=1647795704 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 16.5)
+
+[node name="Floorstone24" parent="Outside floorstone zone 4" unique_id=286380911 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 16.5)
+
+[node name="Floorstone25" parent="Outside floorstone zone 4" unique_id=9255062 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 20.5)
+
+[node name="Floorstone26" parent="Outside floorstone zone 4" unique_id=1691047294 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 20.5)
+
+[node name="Floorstone27" parent="Outside floorstone zone 4" unique_id=2099467024 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 20.5)
+
+[node name="Floorstone28" parent="Outside floorstone zone 4" unique_id=1560401489 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 20.5)
+
+[node name="Floorstone29" parent="Outside floorstone zone 4" unique_id=2119989469 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 20.5)
+
+[node name="Floorstone30" parent="Outside floorstone zone 4" unique_id=753846676 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 20.5)
+
+[node name="CratesStacked" parent="Outside floorstone zone 4" unique_id=914958241 instance=ExtResource("19_tfvvd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.4, 0.1, 11.8)
+
+[node name="Outside floorstone zone 5" type="Node3D" parent="." unique_id=167313226]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -79.600006, 0, -74.4)
+
+[node name="Floorstone" parent="Outside floorstone zone 5" unique_id=1842834696 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 4.6000004)
+
+[node name="Floorstone2" parent="Outside floorstone zone 5" unique_id=232251971 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 4.6000004)
+
+[node name="Floorstone3" parent="Outside floorstone zone 5" unique_id=2145922748 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 4.6000004)
+
+[node name="Floorstone4" parent="Outside floorstone zone 5" unique_id=1694356882 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 4.6000004)
+
+[node name="Floorstone5" parent="Outside floorstone zone 5" unique_id=1615953792 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 4.6000004)
+
+[node name="Floorstone6" parent="Outside floorstone zone 5" unique_id=262989470 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 4.6000004)
+
+[node name="Floorstone7" parent="Outside floorstone zone 5" unique_id=508113174 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 8.6)
+
+[node name="Floorstone8" parent="Outside floorstone zone 5" unique_id=1526261796 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 8.6)
+
+[node name="Floorstone9" parent="Outside floorstone zone 5" unique_id=1078978484 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 8.6)
+
+[node name="Floorstone10" parent="Outside floorstone zone 5" unique_id=367445186 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 8.6)
+
+[node name="Floorstone11" parent="Outside floorstone zone 5" unique_id=1667245469 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 8.6)
+
+[node name="Floorstone12" parent="Outside floorstone zone 5" unique_id=1580284415 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 8.6)
+
+[node name="Floorstone13" parent="Outside floorstone zone 5" unique_id=1048716355 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 12.5)
+
+[node name="Floorstone14" parent="Outside floorstone zone 5" unique_id=1094799827 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 12.5)
+
+[node name="Floorstone15" parent="Outside floorstone zone 5" unique_id=1394887756 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 12.5)
+
+[node name="Floorstone16" parent="Outside floorstone zone 5" unique_id=635392973 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 12.5)
+
+[node name="Floorstone17" parent="Outside floorstone zone 5" unique_id=1446383446 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 12.5)
+
+[node name="Floorstone18" parent="Outside floorstone zone 5" unique_id=1045312920 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 12.5)
+
+[node name="Floorstone19" parent="Outside floorstone zone 5" unique_id=504980083 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 16.5)
+
+[node name="Floorstone20" parent="Outside floorstone zone 5" unique_id=2041722763 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 16.5)
+
+[node name="Floorstone21" parent="Outside floorstone zone 5" unique_id=2036804330 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 16.5)
+
+[node name="Floorstone22" parent="Outside floorstone zone 5" unique_id=1330321570 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 16.5)
+
+[node name="Floorstone23" parent="Outside floorstone zone 5" unique_id=1699421411 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 16.5)
+
+[node name="Floorstone24" parent="Outside floorstone zone 5" unique_id=538843501 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 16.5)
+
+[node name="Floorstone25" parent="Outside floorstone zone 5" unique_id=1749767215 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.200005, 0, 20.5)
+
+[node name="Floorstone26" parent="Outside floorstone zone 5" unique_id=1093217019 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.200005, 0, 20.5)
+
+[node name="Floorstone27" parent="Outside floorstone zone 5" unique_id=1561463465 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.200005, 0, 20.5)
+
+[node name="Floorstone28" parent="Outside floorstone zone 5" unique_id=1612414347 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86.200005, 0, 20.5)
+
+[node name="Floorstone29" parent="Outside floorstone zone 5" unique_id=182129680 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.200005, 0, 20.5)
+
+[node name="Floorstone30" parent="Outside floorstone zone 5" unique_id=20047669 instance=ExtResource("21_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.200005, 0, 20.5)
+
+[node name="Outside wall square zone 1" type="Node3D" parent="." unique_id=1773576776]
+
+[node name="WallTSplit" parent="Outside wall square zone 1" unique_id=1050420312 instance=ExtResource("19_yjd40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84.200005, 1.4901161e-08, 24.1)
+
+[node name="WallTSplit2" parent="Outside wall square zone 1" unique_id=12351209 instance=ExtResource("19_yjd40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.100006, 1.4901161e-08, 24.1)
+
+[node name="Wall" parent="Outside wall square zone 1" unique_id=2113538938 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -76.7, 1.4901161e-08, 18.1)
+
+[node name="Wall2" parent="Outside wall square zone 1" unique_id=1410481357 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -76.7, 1.4901161e-08, 14.1)
+
+[node name="Wall3" parent="Outside wall square zone 1" unique_id=1446014698 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -76.7, 1.4901161e-08, 10.1)
+
+[node name="Wall4" parent="Outside wall square zone 1" unique_id=2012155403 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -76.7, 1.4901161e-08, 6.1000004)
+
+[node name="Wall5" parent="Outside wall square zone 1" unique_id=344969672 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -100.6, 0, 18.1)
+
+[node name="Wall6" parent="Outside wall square zone 1" unique_id=767874054 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -100.6, 0, 14.1)
+
+[node name="Wall7" parent="Outside wall square zone 1" unique_id=42808456 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -100.6, 0, 10.1)
+
+[node name="Wall8" parent="Outside wall square zone 1" unique_id=2128222479 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -100.6, 0, 6.1000004)
+
+[node name="Wall9" parent="Outside wall square zone 1" unique_id=1480909753 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.80001, -2.2351742e-08, 26.09999)
+
+[node name="Wall10" parent="Outside wall square zone 1" unique_id=141921950 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.80001, -2.2351742e-08, 30.09999)
+
+[node name="Wall11" parent="Outside wall square zone 1" unique_id=1224938173 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.8, -2.2351742e-08, 34.09999)
+
+[node name="Wall12" parent="Outside wall square zone 1" unique_id=430926122 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.8, -2.2351742e-08, 38.09999)
+
+[node name="Wall13" parent="Outside wall square zone 1" unique_id=1247214161 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.80001, 4, 26.09999)
+
+[node name="Wall14" parent="Outside wall square zone 1" unique_id=1243247355 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.80001, 4, 30.09999)
+
+[node name="Wall15" parent="Outside wall square zone 1" unique_id=1005128342 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.8, 4, 34.09999)
+
+[node name="Wall16" parent="Outside wall square zone 1" unique_id=1708416242 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.8, 4, 38.09999)
+
+[node name="Wall34" parent="Outside wall square zone 1" unique_id=829310948 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -75.100006, 0, 25.99999)
+
+[node name="Wall35" parent="Outside wall square zone 1" unique_id=1035218924 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -71.100006, 0, 25.99999)
+
+[node name="Wall36" parent="Outside wall square zone 1" unique_id=32193682 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -67.100006, 0, 25.999983)
+
+[node name="Wall37" parent="Outside wall square zone 1" unique_id=628642254 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -63.10001, 0, 25.999983)
+
+[node name="Wall38" parent="Outside wall square zone 1" unique_id=969516358 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -75.100006, 4, 25.99999)
+
+[node name="Wall39" parent="Outside wall square zone 1" unique_id=1034779628 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -71.100006, 4, 25.99999)
+
+[node name="Wall40" parent="Outside wall square zone 1" unique_id=1313855812 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -67.100006, 4, 25.999983)
+
+[node name="Wall41" parent="Outside wall square zone 1" unique_id=1994149679 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -63.10001, 4, 25.999983)
+
+[node name="Wall42" parent="Outside wall square zone 1" unique_id=1323615763 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -59.100006, 0, 25.99999)
+
+[node name="Wall43" parent="Outside wall square zone 1" unique_id=1642249861 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -55.100006, 0, 25.99999)
+
+[node name="Wall44" parent="Outside wall square zone 1" unique_id=741746461 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -51.100006, 0, 25.999983)
+
+[node name="Wall45" parent="Outside wall square zone 1" unique_id=640053858 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -47.10001, 0, 25.999983)
+
+[node name="Wall46" parent="Outside wall square zone 1" unique_id=915861897 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -59.100006, 4, 25.99999)
+
+[node name="Wall47" parent="Outside wall square zone 1" unique_id=525963647 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -55.100006, 4, 25.99999)
+
+[node name="Wall48" parent="Outside wall square zone 1" unique_id=802417164 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -51.100006, 4, 25.999983)
+
+[node name="Wall49" parent="Outside wall square zone 1" unique_id=1222835751 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -47.10001, 4, 25.999983)
+
+[node name="Wall50" parent="Outside wall square zone 1" unique_id=223625366 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 0, 23.499987)
+
+[node name="Wall51" parent="Outside wall square zone 1" unique_id=1978418050 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 0, 19.499987)
+
+[node name="Wall52" parent="Outside wall square zone 1" unique_id=1634433091 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 0, 15.499987)
+
+[node name="Wall53" parent="Outside wall square zone 1" unique_id=154216637 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 0, 11.49999)
+
+[node name="Wall54" parent="Outside wall square zone 1" unique_id=246685708 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 4, 23.499987)
+
+[node name="Wall55" parent="Outside wall square zone 1" unique_id=1144823156 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 4, 19.499987)
+
+[node name="Wall56" parent="Outside wall square zone 1" unique_id=2084213148 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 4, 15.499987)
+
+[node name="Wall57" parent="Outside wall square zone 1" unique_id=1337121400 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 4, 11.49999)
+
+[node name="Wall58" parent="Outside wall square zone 1" unique_id=1046178732 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 0, 7.4999866)
+
+[node name="Wall59" parent="Outside wall square zone 1" unique_id=611829405 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 0, 3.4999866)
+
+[node name="Wall60" parent="Outside wall square zone 1" unique_id=741077621 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 0, -0.50001335)
+
+[node name="Wall61" parent="Outside wall square zone 1" unique_id=1757386590 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 0, -4.5000095)
+
+[node name="Wall62" parent="Outside wall square zone 1" unique_id=2024681593 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 4, 7.4999866)
+
+[node name="Wall63" parent="Outside wall square zone 1" unique_id=2125208179 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 4, 3.4999866)
+
+[node name="Wall64" parent="Outside wall square zone 1" unique_id=182743620 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 4, -0.50001335)
+
+[node name="Wall65" parent="Outside wall square zone 1" unique_id=1755823096 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 4, -4.5000095)
+
+[node name="Wall66" parent="Outside wall square zone 1" unique_id=2133484399 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 0, -8.500013)
+
+[node name="Wall67" parent="Outside wall square zone 1" unique_id=467351812 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 0, -12.500013)
+
+[node name="Wall68" parent="Outside wall square zone 1" unique_id=2040934105 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 0, -16.500013)
+
+[node name="Wall69" parent="Outside wall square zone 1" unique_id=889117510 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 0, -20.50001)
+
+[node name="Wall70" parent="Outside wall square zone 1" unique_id=608349607 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 4, -8.500013)
+
+[node name="Wall71" parent="Outside wall square zone 1" unique_id=2123924306 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.7, 4, -12.500013)
+
+[node name="Wall72" parent="Outside wall square zone 1" unique_id=1260299484 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 4, -16.500013)
+
+[node name="Wall73" parent="Outside wall square zone 1" unique_id=1954962653 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -56.70001, 4, -20.50001)
+
+[node name="Wall74" parent="Outside wall square zone 1" unique_id=196336415 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -71.100006, 0, -18.200005)
+
+[node name="Wall75" parent="Outside wall square zone 1" unique_id=1467942938 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -67.100006, 0, -18.200005)
+
+[node name="Wall76" parent="Outside wall square zone 1" unique_id=1869991733 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -63.100006, 0, -18.20002)
+
+[node name="Wall77" parent="Outside wall square zone 1" unique_id=778764067 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -59.10001, 0, -18.20002)
+
+[node name="Wall78" parent="Outside wall square zone 1" unique_id=968756214 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -71.100006, 4, -18.200005)
+
+[node name="Wall79" parent="Outside wall square zone 1" unique_id=1009195782 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -67.100006, 4, -18.200005)
+
+[node name="Wall80" parent="Outside wall square zone 1" unique_id=794951648 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -63.100006, 4, -18.20002)
+
+[node name="Wall81" parent="Outside wall square zone 1" unique_id=855864367 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -59.10001, 4, -18.20002)
+
+[node name="Wall84" parent="Outside wall square zone 1" unique_id=1414306491 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -78.90001, 0, -18.20002)
+
+[node name="Wall85" parent="Outside wall square zone 1" unique_id=1470952328 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -74.90001, 0, -18.20002)
+
+[node name="Wall88" parent="Outside wall square zone 1" unique_id=746431878 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -78.90001, 4, -18.20002)
+
+[node name="Wall89" parent="Outside wall square zone 1" unique_id=531975786 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -74.90001, 4, -18.20002)
+
+[node name="Wall17" parent="Outside wall square zone 1" unique_id=305474285 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.50001, -0.100000024, -14.100011)
+
+[node name="Wall18" parent="Outside wall square zone 1" unique_id=1963117279 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.50001, -0.100000024, -10.100011)
+
+[node name="Wall20" parent="Outside wall square zone 1" unique_id=1770764874 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.80001, -2.2351742e-08, 26.09999)
+
+[node name="Wall25" parent="Outside wall square zone 1" unique_id=1843922970 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.80001, -2.2351742e-08, 30.09999)
+
+[node name="Wall26" parent="Outside wall square zone 1" unique_id=249165234 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.8, -2.2351742e-08, 34.09999)
+
+[node name="Wall27" parent="Outside wall square zone 1" unique_id=1600930936 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.8, -2.2351742e-08, 38.09999)
+
+[node name="Wall28" parent="Outside wall square zone 1" unique_id=916403414 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.80001, 4, 26.09999)
+
+[node name="Wall29" parent="Outside wall square zone 1" unique_id=1330095758 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.80001, 4, 30.09999)
+
+[node name="Wall30" parent="Outside wall square zone 1" unique_id=1262655035 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.8, 4, 34.09999)
+
+[node name="Wall31" parent="Outside wall square zone 1" unique_id=247106005 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -84.8, 4, 38.09999)
+
+[node name="Wall82" parent="Outside wall square zone 1" unique_id=761619321 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -92.60001, -2.2351742e-08, 26.09999)
+
+[node name="Wall83" parent="Outside wall square zone 1" unique_id=1268179153 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -92.60001, -2.2351742e-08, 30.09999)
+
+[node name="Wall86" parent="Outside wall square zone 1" unique_id=656108888 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -92.600006, -2.2351742e-08, 34.09999)
+
+[node name="Wall87" parent="Outside wall square zone 1" unique_id=633580900 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -92.60001, 4, 30.09999)
+
+[node name="Wall90" parent="Outside wall square zone 1" unique_id=1030895725 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -92.600006, 4, 34.09999)
+
+[node name="Wall91" parent="Outside wall square zone 1" unique_id=2088416543 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -92.600006, -2.2351742e-08, 38.09999)
+
+[node name="Wall92" parent="Outside wall square zone 1" unique_id=510636354 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -92.60001, 4, 26.09999)
+
+[node name="Wall93" parent="Outside wall square zone 1" unique_id=1921658838 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -92.600006, 4, 38.09999)
+
+[node name="Wall94" parent="Outside wall square zone 1" unique_id=997548511 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -100.20001, -2.2351742e-08, 24.59999)
+
+[node name="Wall95" parent="Outside wall square zone 1" unique_id=698338802 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.70001, -2.2351742e-08, -7.2000093)
+
+[node name="Wall96" parent="Outside wall square zone 1" unique_id=1738533981 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.700005, -2.2351742e-08, -3.200009)
+
+[node name="Wall97" parent="Outside wall square zone 1" unique_id=1616203551 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.70001, 4, -7.2000093)
+
+[node name="Wall98" parent="Outside wall square zone 1" unique_id=890969148 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.700005, 4, -3.200009)
+
+[node name="Wall99" parent="Outside wall square zone 1" unique_id=365938581 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.700005, -2.2351742e-08, 0.7999909)
+
+[node name="Wall115" parent="Outside wall square zone 1" unique_id=302838605 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.700005, -2.2351742e-08, 4.7999907)
+
+[node name="Wall100" parent="Outside wall square zone 1" unique_id=1688093469 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -100.20001, 4, 24.59999)
+
+[node name="Wall101" parent="Outside wall square zone 1" unique_id=1349460932 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.700005, 4, 0.7999909)
+
+[node name="Wall102" parent="Outside wall square zone 1" unique_id=316566627 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.700005, 0, 28.599983)
+
+[node name="Wall103" parent="Outside wall square zone 1" unique_id=605374676 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.700005, 0, 28.599983)
+
+[node name="Wall104" parent="Outside wall square zone 1" unique_id=1869226525 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.700005, 0, 28.59999)
+
+[node name="Wall105" parent="Outside wall square zone 1" unique_id=1394308827 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.700005, 4, 28.599983)
+
+[node name="Wall106" parent="Outside wall square zone 1" unique_id=695995075 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.700005, 4, 28.59999)
+
+[node name="Wall107" parent="Outside wall square zone 1" unique_id=1974826581 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.700005, 0, 28.59999)
+
+[node name="Wall108" parent="Outside wall square zone 1" unique_id=198200370 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.700005, 4, 28.599983)
+
+[node name="Wall109" parent="Outside wall square zone 1" unique_id=874760080 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.700005, 4, 28.59999)
+
+[node name="Wall110" parent="Outside wall square zone 1" unique_id=662477647 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.700005, 0, 28.599983)
+
+[node name="Wall111" parent="Outside wall square zone 1" unique_id=1146435338 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.700005, 0, 28.599983)
+
+[node name="Wall112" parent="Outside wall square zone 1" unique_id=1763669002 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -124.7, 0, 8.799982)
+
+[node name="Wall113" parent="Outside wall square zone 1" unique_id=678718739 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.700005, 4, 28.599983)
+
+[node name="Wall114" parent="Outside wall square zone 1" unique_id=1661499642 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -124.7, 4, 8.799982)
+
+[node name="Wall116" parent="Outside wall square zone 1" unique_id=209274839 instance=ExtResource("5_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.700005, 4, 28.599983)
+
+[node name="Wall117" parent="Outside wall square zone 1" unique_id=1842183219 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -124.7, 4, 4.799989)
+
+[node name="Wall118" parent="Outside wall square zone 1" unique_id=811505524 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.70001, 0, 12.799988)
+
+[node name="Wall119" parent="Outside wall square zone 1" unique_id=927318215 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.70001, 0, 16.799988)
+
+[node name="Wall120" parent="Outside wall square zone 1" unique_id=1746430209 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.7, 0, 20.799988)
+
+[node name="Wall121" parent="Outside wall square zone 1" unique_id=144499768 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.70001, 4, 16.799988)
+
+[node name="Wall122" parent="Outside wall square zone 1" unique_id=496907690 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.7, 4, 20.799988)
+
+[node name="Wall123" parent="Outside wall square zone 1" unique_id=617738305 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.7, 0, 24.79998)
+
+[node name="Wall124" parent="Outside wall square zone 1" unique_id=396569009 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.70001, 4, 12.799988)
+
+[node name="Wall125" parent="Outside wall square zone 1" unique_id=290420589 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.7, 4, 24.79998)
+
+[node name="Wall32" parent="Outside wall square zone 1" unique_id=496831819 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.50001, -0.100000024, -14.100011)
+
+[node name="Wall33" parent="Outside wall square zone 1" unique_id=4309731 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.50001, -0.100000024, -10.100011)
+
+[node name="Wall19" parent="Outside wall square zone 1" unique_id=1553655759 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.5, -0.100000024, -6.100011)
+
+[node name="Wall21" parent="Outside wall square zone 1" unique_id=1584127219 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.50001, 3.9, -14.100011)
+
+[node name="Wall22" parent="Outside wall square zone 1" unique_id=2035805404 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.50001, 3.9, -10.100011)
+
+[node name="Wall23" parent="Outside wall square zone 1" unique_id=45240013 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.5, 3.9, -6.100011)
+
+[node name="Wall24" parent="Outside wall square zone 1" unique_id=1733677572 instance=ExtResource("5_y7k50")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.5, 3.9, -2.1000109)
+
+[node name="WallCorner" parent="Outside wall square zone 1" unique_id=886901702 instance=ExtResource("7_hn2wp")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -100.5, 0, 21.9)
+
+[node name="WallCorner2" parent="Outside wall square zone 1" unique_id=1734385854 instance=ExtResource("7_hn2wp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -76.899994, 0, 22)
+
+[node name="WallCorner4" parent="Outside wall square zone 1" unique_id=1448189776 instance=ExtResource("7_hn2wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.799995, 0, 2.2999997)
+
+[node name="Wall Arched Collider" parent="Outside wall square zone 1" unique_id=1243605806 instance=ExtResource("20_yjd40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.49999, 0, 1.0999999)
+
+[node name="Wall Arched Collider2" parent="Outside wall square zone 1" unique_id=68381926 instance=ExtResource("20_yjd40")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -81.49999, -0.1, -2.3000002)
+
+[node name="WallCracked" parent="Outside wall square zone 1" unique_id=1983518147 instance=ExtResource("11_h6i2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93, 0, 2.1)
+
+[node name="WallCracked2" parent="Outside wall square zone 1" unique_id=2104393163 instance=ExtResource("11_h6i2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97, 0, 2.1000001)
+
+[node name="WallCracked3" parent="Outside wall square zone 1" unique_id=1131723980 instance=ExtResource("11_h6i2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81, 0, 2.1)
+
+[node name="WallCracked4" parent="Outside wall square zone 1" unique_id=1538365358 instance=ExtResource("11_h6i2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85, 0, 2.1000001)
+
+[node name="WallCorner3" parent="Outside wall square zone 1" unique_id=39541725 instance=ExtResource("7_hn2wp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -100.4, 0, 2.2)
+
+[node name="ArchWindowGate" parent="Outside wall square zone 1" unique_id=771550889 instance=ExtResource("17_51t5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.6, 0, 22.1)
+
+[node name="ArchWindowGate5" parent="Outside wall square zone 1" unique_id=871480731 instance=ExtResource("17_51t5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.7, 0, 22.1)
+
+[node name="WallWindowClosed" parent="Outside wall square zone 1" unique_id=257107100 instance=ExtResource("22_bdxym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.7, 0, 22.7)
+
+[node name="WallCorner5" parent="Outside wall square zone 1" unique_id=75655003 instance=ExtResource("7_hn2wp")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -124.600006, 2.2351742e-08, 28.400002)
+
+[node name="WallCorner6" parent="Outside wall square zone 1" unique_id=1095016947 instance=ExtResource("7_hn2wp")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -124.600006, 4, 28.400002)
+
+[node name="WallDoorway" parent="." unique_id=1844490090 instance=ExtResource("10_4acd6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -76.1, 0.1, 24.3)
+
+[node name="CratesStacked" parent="." unique_id=1411033642 instance=ExtResource("19_tfvvd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.200005, 0.1, -8.8)
+
+[node name="barrel" parent="." unique_id=528006686 instance=ExtResource("4_y7k50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.100006, 0.1, -7.5)
+
+[node name="ArchWindowGate" parent="." unique_id=2010056920 instance=ExtResource("17_51t5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.6, 0.1, -12)
+
+[node name="WallHalfEndcap" parent="." unique_id=1722133844 instance=ExtResource("6_t3xkd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124, 2.2351742e-08, -10.2)
+
+[node name="WallHalfEndcap2" parent="." unique_id=201155256 instance=ExtResource("6_t3xkd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124, 4, -10.2)
